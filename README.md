@@ -16,6 +16,7 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 
 #### Projects
 
+- [**waypoint**](https://github.com/Karthick-dev-cart/waypoint) — a durable, checkpointed workflow engine for chaining Claude-powered steps, with human-in-the-loop approval gates and an audit trail
 - [**oss-scout**](https://github.com/Karthick-dev-cart/oss-scout) — an MCP server that finds genuinely-contributable open source issues by filtering out ones already swarmed with duplicate PRs
 - [**flowforge**](https://github.com/Karthick-dev-cart/flowforge) — a small, config-driven, pluggable ETL pipeline toolkit
 
