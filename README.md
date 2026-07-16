@@ -16,6 +16,7 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 
 #### Projects
 
+- [**quorum**](https://github.com/Karthick-dev-cart/quorum) — a multi-agent orchestration control plane built around budget enforcement and per-agent failure isolation, not another happy-path demo framework
 - [**rubric**](https://github.com/Karthick-dev-cart/rubric) — an LLM-as-judge eval harness that grades Claude outputs against rubric criteria using structured outputs
 - [**waypoint**](https://github.com/Karthick-dev-cart/waypoint) — a durable, checkpointed workflow engine for chaining Claude-powered steps, with human-in-the-loop approval gates and an audit trail
 - [**oss-scout**](https://github.com/Karthick-dev-cart/oss-scout) — an MCP server that finds genuinely-contributable open source issues by filtering out ones already swarmed with duplicate PRs
