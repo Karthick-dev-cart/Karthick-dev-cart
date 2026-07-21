@@ -48,3 +48,7 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 #### Open source contributions
 
 - [pandera#2415](https://github.com/unionai-oss/pandera/pull/2415) — fixed a regression where optional pydantic fields were incorrectly rejected as non-nullable. Found it the same way oss-scout now automates: searching for a genuine, unclaimed bug instead of a swarmed "good first issue."
+
+#### In progress
+
+- [google/langextract](https://github.com/google/langextract) — verified two genuine, unclaimed bugs against current `main`: [#492](https://github.com/google/langextract/issues/492) (OpenAI o-series/gpt-3.5 model IDs route to no provider) and [#491](https://github.com/google/langextract/issues/491) (a refused/content-filtered OpenAI completion is silently reported as a successful empty result instead of raising, unlike the equivalent batch-path guard). Fixes and regression tests are ready; PRs are pending because the repo's contribution guidelines require the linked issue to have community reactions first — commented on both to help clear that bar honestly rather than opening PRs against a 0-reaction issue.
