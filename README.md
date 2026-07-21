@@ -22,14 +22,15 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 
 #### Agent infrastructure
 
-The throughline across these four: a hard budget or circuit breaker checked *before* work happens, failures isolated to the one call that raised them instead of taking the whole run down, and READ-THROUGH isolation so you never hallucinate about state nobody committed to shared storage.
+The throughline across these five: a hard budget or circuit breaker checked *before* work happens, failures isolated to the one call that raised them instead of taking the whole run down, and README sections that say plainly what's been verified against the real Claude API versus what's only proven against fakes.
 
 | Project | What it does |
 |---|---|
 | [**horizon**](https://github.com/Karthick-dev-cart/horizon) | A context-window budget manager for long-running Claude agents: drops or summarizes old turns to stay within a token budget, never crashing on overflow |
-| [**quorum**](https://github.com/Karthick-dev-cart/quorum) | A multi-agent orchestration control plane built around budget enforcement and failure isolation, not happy-path demos |
-| [**waypoint**](https://github.com/Karthick-dev-cart/waypoint) | Per-call failure isolation and honest tool result verification for agentic systems |
-| [**rubric**](https://github.com/Karthick-dev-cart/rubric) | Structured evaluation and scoring framework for agent outputs |
+| [**quorum**](https://github.com/Karthick-dev-cart/quorum) | A multi-agent orchestration control plane built around budget enforcement and per-agent failure isolation, not another happy-path demo framework |
+| [**pathfinder**](https://github.com/Karthick-dev-cart/pathfinder) | A long-horizon task planner that detects when a plan has drifted from its goal and replans only the remaining work — the re-planning loop quorum's own README leaves as a known gap |
+| [**waypoint**](https://github.com/Karthick-dev-cart/waypoint) | A durable, checkpointed workflow engine for chaining Claude-powered steps, with human-in-the-loop approval gates and an audit trail |
+| [**rubric**](https://github.com/Karthick-dev-cart/rubric) | An LLM-as-judge eval harness that grades Claude outputs against rubric criteria using structured outputs, not regex on free text |
 
 #### Design systems & frontend tooling
 
@@ -41,9 +42,9 @@ The throughline across these four: a hard budget or circuit breaker checked *bef
 
 | Project | What it does |
 |---|---|
-| [**oss-scout**](https://github.com/Karthick-dev-cart/oss-scout) | Discovers and validates patterns in open source projects, helping identify architecture decisions and integration points |
-| [**flowforge**](https://github.com/Karthick-dev-cart/flowforge) | Workflow automation and orchestration primitives for building resilient data pipelines |
+| [**oss-scout**](https://github.com/Karthick-dev-cart/oss-scout) | An MCP server that finds genuinely-contributable open source issues by filtering out ones already swarmed with duplicate PRs |
+| [**flowforge**](https://github.com/Karthick-dev-cart/flowforge) | A small, config-driven, pluggable ETL pipeline toolkit |
 
 #### Open source contributions
 
-- [pandera#2415](https://github.com/unionai-oss/pandera/pull/2415) — fixed a regression where optional pydantic fields were incorrectly rejected as non-nullable. Found it the same way oss-scout does: systematic crawl of type narrowing logic
+- [pandera#2415](https://github.com/unionai-oss/pandera/pull/2415) — fixed a regression where optional pydantic fields were incorrectly rejected as non-nullable. Found it the same way oss-scout now automates: searching for a genuine, unclaimed bug instead of a swarmed "good first issue."
