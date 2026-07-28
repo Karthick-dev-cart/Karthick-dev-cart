@@ -42,10 +42,13 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 
 #### Games
 
-Five small Flutter games, each its own repo — built and verified running (not just compiled) before being pushed, with the tricky bit called out explicitly where there is one.
+Eight small Flutter games, each its own repo — built and verified running (not just compiled) before being pushed, with the tricky bit called out explicitly where there is one.
 
 | Project | What it does |
 |---|---|
+| [**chess**](https://github.com/Karthick-dev-cart/chess) | Minimax + alpha-beta AI, but the real story is the move generator: verified with [perft](https://www.chessprogramming.org/Perft_Results) against published reference values across three positions, because start-position perft alone never even reaches castling or promotion |
+| [**connectfour**](https://github.com/Karthick-dev-cart/connectfour) | Minimax + alpha-beta with a window-counting heuristic, tested against concrete tactical positions (winning drops, blocked threats) rather than just "does it run" |
+| [**tictactoe**](https://github.com/Karthick-dev-cart/tictactoe) | An actually-unbeatable AI — full minimax verified by an exhaustive test that plays it against every possible opponent line, not a couple of hand-picked cases |
 | [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games (Memory Match, Number Merge, Reflex Trainer, Word Scramble) behind Firebase email/password sign-in |
 | [**sudoku**](https://github.com/Karthick-dev-cart/sudoku) | Classic Sudoku with a real backtracking generator that guarantees a unique solution — not naive fill-then-remove, which can silently ship ambiguous puzzles |
 | [**wordle**](https://github.com/Karthick-dev-cart/wordle) | A Wordle clone with duplicate-letter-aware color feedback (unit tested) and a persisted win streak |
