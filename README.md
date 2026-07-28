@@ -42,7 +42,7 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 
 #### Games
 
-A growing set of small Flutter games, each its own repo — built and verified running (not just compiled) before being pushed. Highlights, where there's a genuinely distinct technical story:
+58 small Flutter games, each its own repo — built and verified running (not just compiled) before being pushed. Highlights, where there's a genuinely distinct technical story:
 
 | Project | What it does |
 |---|---|
@@ -51,13 +51,15 @@ A growing set of small Flutter games, each its own repo — built and verified r
 | [**checkers**](https://github.com/Karthick-dev-cart/checkers) | Mandatory captures and multi-jump chains — the two rules a simplified checkers implementation usually drops — verified with a constructed double-jump position, not just single captures |
 | [**tictactoe**](https://github.com/Karthick-dev-cart/tictactoe) | An actually-unbeatable AI — full minimax verified by an exhaustive test that plays it against every possible opponent line, not a couple of hand-picked cases |
 | [**nim**](https://github.com/Karthick-dev-cart/nim) | AI plays the mathematically perfect nim-sum strategy from combinatorial game theory, not a heuristic — verified against every possible opponent reply, not just spot-checked |
-| [**battleship**](https://github.com/Karthick-dev-cart/battleship) | A hunt-and-target AI (random search until a hit, then work the neighbors) instead of firing at random cells forever |
+| [**pixelchase**](https://github.com/Karthick-dev-cart/pixelchase) | Pac-Man-style ghosts that recompute a fresh BFS shortest path to the player *every tick* (not a path frozen at spawn), and flee toward the farthest open cell once you've eaten a power pellet |
+| [**fifteenpuzzle**](https://github.com/Karthick-dev-cart/fifteenpuzzle) | Generates only solvable boards using the actual parity invariant that governs the 15-puzzle — verified against the historically famous "14-15 swap," the real-world proof case for why the invariant matters |
+| [**freecell**](https://github.com/Karthick-dev-cart/freecell) | Full Freecell rules, not a simplified card game — moving one card at a time through free cells *is* how Freecell actually works, unlike the single-card-move scope-cut in the Klondike build |
 | [**sudoku**](https://github.com/Karthick-dev-cart/sudoku) | A real backtracking generator that guarantees a unique solution — not naive fill-then-remove, which can silently ship ambiguous puzzles |
 | [**dotsandboxes**](https://github.com/Karthick-dev-cart/dotsandboxes) | Handles a single line completing two boxes at once (a shared edge), with an AI that specifically avoids gifting the opponent a free box |
 | [**wordle**](https://github.com/Karthick-dev-cart/wordle) | Duplicate-letter-aware color feedback (unit tested) and a persisted win streak |
 | [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games behind Firebase email/password sign-in |
 
-Plus casual titles — Minesweeper, Hangman, Rock Paper Scissors, Whack-a-Mole, Simon Says, Yahtzee, Boggle, Mastermind, Reversi, Mancala, Lights Out, SkyHop, Snake, and more as they land — all built and verified the same way. Full list on the [repositories page](https://github.com/Karthick-dev-cart?tab=repositories).
+Plus a long tail of casual and genre titles — Minesweeper, Battleship, Hangman, Rock Paper Scissors, Whack-a-Mole, Simon Says, Yahtzee, Boggle, Mastermind, Reversi, Checkers, Mancala, Lights Out, Tetris, Bubble Shooter, Match 3, Air Hockey, Gomoku, Ultimate Tic-Tac-Toe, Light Cycles, Tower of Hanoi, Peg Solitaire, Go Fish, Crazy Eights, SkyHop, Snake, and more — all built with the same pipeline: a pure-Dart engine decoupled from the UI, unit tests sized to the game's actual complexity, `flutter analyze` clean, and the Windows build launched and confirmed running before anything gets pushed. Full list on the [repositories page](https://github.com/Karthick-dev-cart?tab=repositories).
 
 #### Developer tooling
 
