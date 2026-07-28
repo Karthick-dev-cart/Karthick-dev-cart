@@ -32,6 +32,16 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
   <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Karthick-dev-cart&layout=compact&theme=tokyonight&hide_border=true&hide_title=true" alt="Top languages" />
 </p>
 
+#### How I verify before shipping
+
+Same checklist on every repo below, whether it's a Python agent tool or a Flutter game — this is the actual gate, not aspirational:
+
+1. **Logic and interface are separate.** Business/game logic lives in its own module with zero framework imports — no Flutter widgets in a game's rules, no HTTP client in an agent's planning loop — so it's unit-testable without spinning up a UI or hitting a live API.
+2. **Test depth matches the actual complexity**, not a padded-to-look-thorough number. An exhaustive-search AI gets an exhaustive test that plays out every opponent line; a heuristic AI gets concrete tactical positions; a puzzle generator gets a correctness proof (uniqueness, solvability, or connectivity — whichever invariant is load-bearing); a card game gets its actual rulebook exercised edge case by edge case.
+3. **Static analysis has to be clean** — `flutter analyze` / linting with zero issues — before anything moves on.
+4. **It has to actually run**, not just build. For the Flutter games specifically, that means launching the real Windows `.exe` and confirming the process is alive via a live process check, because a successful compile and a working app are not the same claim.
+5. **Downloadable, not just readable.** Each game repo ships a ready-to-run Windows build as a [GitHub Release](https://github.com/Karthick-dev-cart?tab=repositories) — no Flutter SDK required, just download, unzip, and run.
+
 #### Agent infrastructure
 
 The throughline across these five: a hard budget or circuit breaker checked *before* work happens, failures isolated to the one call that raised them instead of taking the whole run down, and README sections that say plainly what's been verified against the real Claude API versus what's only proven against fakes.
@@ -52,7 +62,7 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 
 #### Games
 
-**58** small Flutter games, each its own repo, each built with the same pipeline: a pure-Dart engine decoupled from the UI, unit tests sized to the game's actual complexity, `flutter analyze` clean, and the Windows build launched and confirmed *running* — not just compiled — before anything gets pushed.
+**58** small Flutter games, each its own repo, each shipped as source *and* as a downloadable Windows `.exe` under that repo's Releases tab — see [How I verify before shipping](#how-i-verify-before-shipping) above for the pipeline every one of them goes through.
 
 <details>
 <summary><strong>🧠 Where the AI actually thinks</strong> — exhaustive proofs, minimax, and pathfinding</summary>
