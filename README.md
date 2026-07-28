@@ -1,5 +1,10 @@
 ### Hi, I'm Karthick 👋
 
+![Profile views](https://komarev.com/ghpvc/?username=Karthick-dev-cart&color=6e56cf&style=flat-square&label=profile+views)
+![Games shipped](https://img.shields.io/badge/games%20shipped-58-6e56cf?style=flat-square)
+![Agent infra tools](https://img.shields.io/badge/agent%20infra%20tools-5-6e56cf?style=flat-square)
+![Dev tooling](https://img.shields.io/badge/dev%20tooling-2-6e56cf?style=flat-square)
+
 Senior technical architect and AI agentic automation engineer, working in **Python** — data pipelines, backend systems, and agent tooling. Also shipping **TypeScript** design systems and frontend tooling.
 
 - 🔭 Building well-architected, fully-tested projects rather than one-off scripts — every repo below has a test suite, CI, and a README that explains *why*, not just *what*
@@ -22,6 +27,11 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 ![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/-Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
 
+<p align="left">
+  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=Karthick-dev-cart&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide_title=true" alt="GitHub stats" />
+  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Karthick-dev-cart&layout=compact&theme=tokyonight&hide_border=true&hide_title=true" alt="Top languages" />
+</p>
+
 #### Agent infrastructure
 
 The throughline across these five: a hard budget or circuit breaker checked *before* work happens, failures isolated to the one call that raised them instead of taking the whole run down, and README sections that say plainly what's been verified against the real Claude API versus what's only proven against fakes.
@@ -42,24 +52,48 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 
 #### Games
 
-58 small Flutter games, each its own repo — built and verified running (not just compiled) before being pushed. Highlights, where there's a genuinely distinct technical story:
+**58** small Flutter games, each its own repo, each built with the same pipeline: a pure-Dart engine decoupled from the UI, unit tests sized to the game's actual complexity, `flutter analyze` clean, and the Windows build launched and confirmed *running* — not just compiled — before anything gets pushed.
+
+<details>
+<summary><strong>🧠 Where the AI actually thinks</strong> — exhaustive proofs, minimax, and pathfinding</summary>
+<br>
 
 | Project | What it does |
 |---|---|
 | [**chess**](https://github.com/Karthick-dev-cart/chess) | Minimax + alpha-beta AI, but the real story is the move generator: verified with [perft](https://www.chessprogramming.org/Perft_Results) against published reference values across three positions, because start-position perft alone never even reaches castling or promotion |
-| [**connectfour**](https://github.com/Karthick-dev-cart/connectfour) | Minimax + alpha-beta with a window-counting heuristic, tested against concrete tactical positions (winning drops, blocked threats) rather than just "does it run" |
-| [**checkers**](https://github.com/Karthick-dev-cart/checkers) | Mandatory captures and multi-jump chains — the two rules a simplified checkers implementation usually drops — verified with a constructed double-jump position, not just single captures |
 | [**tictactoe**](https://github.com/Karthick-dev-cart/tictactoe) | An actually-unbeatable AI — full minimax verified by an exhaustive test that plays it against every possible opponent line, not a couple of hand-picked cases |
 | [**nim**](https://github.com/Karthick-dev-cart/nim) | AI plays the mathematically perfect nim-sum strategy from combinatorial game theory, not a heuristic — verified against every possible opponent reply, not just spot-checked |
+| [**connectfour**](https://github.com/Karthick-dev-cart/connectfour) | Minimax + alpha-beta with a window-counting heuristic, tested against concrete tactical positions (winning drops, blocked threats) rather than just "does it run" |
+| [**checkers**](https://github.com/Karthick-dev-cart/checkers) | Mandatory captures and multi-jump chains — the two rules a simplified checkers implementation usually drops — verified with a constructed double-jump position, not just single captures |
 | [**pixelchase**](https://github.com/Karthick-dev-cart/pixelchase) | Pac-Man-style ghosts that recompute a fresh BFS shortest path to the player *every tick* (not a path frozen at spawn), and flee toward the farthest open cell once you've eaten a power pellet |
+| [**lightcycles**](https://github.com/Karthick-dev-cart/lightcycles) | A Tron-style AI that doesn't chase you at all — it flood-fills the open space behind each candidate move and picks whichever leaves it the most room to keep riding |
+
+</details>
+
+<details>
+<summary><strong>🔍 Where correctness is the whole point</strong> — generators, physics, and rules</summary>
+<br>
+
+| Project | What it does |
+|---|---|
+| [**sudoku**](https://github.com/Karthick-dev-cart/sudoku) | A real backtracking generator that guarantees a unique solution — not naive fill-then-remove, which can silently ship ambiguous puzzles |
 | [**fifteenpuzzle**](https://github.com/Karthick-dev-cart/fifteenpuzzle) | Generates only solvable boards using the actual parity invariant that governs the 15-puzzle — verified against the historically famous "14-15 swap," the real-world proof case for why the invariant matters |
 | [**freecell**](https://github.com/Karthick-dev-cart/freecell) | Full Freecell rules, not a simplified card game — moving one card at a time through free cells *is* how Freecell actually works, unlike the single-card-move scope-cut in the Klondike build |
-| [**sudoku**](https://github.com/Karthick-dev-cart/sudoku) | A real backtracking generator that guarantees a unique solution — not naive fill-then-remove, which can silently ship ambiguous puzzles |
 | [**dotsandboxes**](https://github.com/Karthick-dev-cart/dotsandboxes) | Handles a single line completing two boxes at once (a shared edge), with an AI that specifically avoids gifting the opponent a free box |
 | [**wordle**](https://github.com/Karthick-dev-cart/wordle) | Duplicate-letter-aware color feedback (unit tested) and a persisted win streak |
 | [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games behind Firebase email/password sign-in |
 
-Plus a long tail of casual and genre titles — Minesweeper, Battleship, Hangman, Rock Paper Scissors, Whack-a-Mole, Simon Says, Yahtzee, Boggle, Mastermind, Reversi, Checkers, Mancala, Lights Out, Tetris, Bubble Shooter, Match 3, Air Hockey, Gomoku, Ultimate Tic-Tac-Toe, Light Cycles, Tower of Hanoi, Peg Solitaire, Go Fish, Crazy Eights, SkyHop, Snake, and more — all built with the same pipeline: a pure-Dart engine decoupled from the UI, unit tests sized to the game's actual complexity, `flutter analyze` clean, and the Windows build launched and confirmed running before anything gets pushed. Full list on the [repositories page](https://github.com/Karthick-dev-cart?tab=repositories).
+</details>
+
+<details>
+<summary><strong>🕹️ The rest of the collection</strong> — 45 more, same rigor, one tap away</summary>
+<br>
+
+Minesweeper, Battleship, Hangman, Rock Paper Scissors, Whack-a-Mole, Simon Says, Yahtzee, Boggle, Mastermind, Reversi, Mancala, Lights Out, Tetris, Bubble Shooter, Match 3, Air Hockey, Gomoku, Ultimate Tic-Tac-Toe, Tower of Hanoi, Peg Solitaire, Go Fish, Crazy Eights, Solitaire, Blackjack, War, Word Search, Anagram, Math Quiz Sprint, Typing Speed Test, 2048, Breakout, Pong, Asteroids, Doodle Jumper, Maze Runner, Memory Match, Space Invaders, Flood Fill, Threes Merge, Balloon Pop, Fruit Slice, Mini Crossword, Trivia Quiz, SkyHop, Snake — and counting.
+
+Full list, always current, on the [repositories page](https://github.com/Karthick-dev-cart?tab=repositories).
+
+</details>
 
 #### Developer tooling
 
