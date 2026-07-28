@@ -48,15 +48,16 @@ A growing set of small Flutter games, each its own repo — built and verified r
 |---|---|
 | [**chess**](https://github.com/Karthick-dev-cart/chess) | Minimax + alpha-beta AI, but the real story is the move generator: verified with [perft](https://www.chessprogramming.org/Perft_Results) against published reference values across three positions, because start-position perft alone never even reaches castling or promotion |
 | [**connectfour**](https://github.com/Karthick-dev-cart/connectfour) | Minimax + alpha-beta with a window-counting heuristic, tested against concrete tactical positions (winning drops, blocked threats) rather than just "does it run" |
+| [**checkers**](https://github.com/Karthick-dev-cart/checkers) | Mandatory captures and multi-jump chains — the two rules a simplified checkers implementation usually drops — verified with a constructed double-jump position, not just single captures |
 | [**tictactoe**](https://github.com/Karthick-dev-cart/tictactoe) | An actually-unbeatable AI — full minimax verified by an exhaustive test that plays it against every possible opponent line, not a couple of hand-picked cases |
 | [**nim**](https://github.com/Karthick-dev-cart/nim) | AI plays the mathematically perfect nim-sum strategy from combinatorial game theory, not a heuristic — verified against every possible opponent reply, not just spot-checked |
 | [**battleship**](https://github.com/Karthick-dev-cart/battleship) | A hunt-and-target AI (random search until a hit, then work the neighbors) instead of firing at random cells forever |
 | [**sudoku**](https://github.com/Karthick-dev-cart/sudoku) | A real backtracking generator that guarantees a unique solution — not naive fill-then-remove, which can silently ship ambiguous puzzles |
-| [**mastermind**](https://github.com/Karthick-dev-cart/mastermind) | Duplicate-color-aware peg feedback, same two-pass algorithm shape as Wordle's letter coloring |
+| [**dotsandboxes**](https://github.com/Karthick-dev-cart/dotsandboxes) | Handles a single line completing two boxes at once (a shared edge), with an AI that specifically avoids gifting the opponent a free box |
 | [**wordle**](https://github.com/Karthick-dev-cart/wordle) | Duplicate-letter-aware color feedback (unit tested) and a persisted win streak |
 | [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games behind Firebase email/password sign-in |
 
-Plus casual titles — Minesweeper, Hangman, Rock Paper Scissors, Whack-a-Mole, Simon Says, Yahtzee, Boggle, SkyHop, Snake, and more as they land — all built and verified the same way. Full list on the [repositories page](https://github.com/Karthick-dev-cart?tab=repositories).
+Plus casual titles — Minesweeper, Hangman, Rock Paper Scissors, Whack-a-Mole, Simon Says, Yahtzee, Boggle, Mastermind, Reversi, Mancala, Lights Out, SkyHop, Snake, and more as they land — all built and verified the same way. Full list on the [repositories page](https://github.com/Karthick-dev-cart?tab=repositories).
 
 #### Developer tooling
 
