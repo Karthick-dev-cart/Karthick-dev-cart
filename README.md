@@ -19,6 +19,8 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 ![Claude API](https://img.shields.io/badge/-Claude%20API-D97757?style=flat-square)
 ![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/-Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
 
 #### Agent infrastructure
 
@@ -37,6 +39,12 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 | Project | What it does |
 |---|---|
 | [**hearth-design-system**](https://github.com/Karthick-dev-cart/hearth-design-system) | Hearth — a Claude-inspired design system: tokens, accessible React components, and a written rulebook |
+
+#### Mobile apps
+
+| Project | What it does |
+|---|---|
+| [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | A Flutter brain-training app with four mini-games (Memory Match, Number Merge, Reflex Trainer, Word Scramble) and Firebase email/password auth |
 
 #### Developer tooling
 
