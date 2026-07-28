@@ -40,11 +40,17 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 |---|---|
 | [**hearth-design-system**](https://github.com/Karthick-dev-cart/hearth-design-system) | Hearth — a Claude-inspired design system: tokens, accessible React components, and a written rulebook |
 
-#### Mobile apps
+#### Games
+
+Five small Flutter games, each its own repo — built and verified running (not just compiled) before being pushed, with the tricky bit called out explicitly where there is one.
 
 | Project | What it does |
 |---|---|
-| [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | A Flutter brain-training app with four mini-games (Memory Match, Number Merge, Reflex Trainer, Word Scramble) and Firebase email/password auth |
+| [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games (Memory Match, Number Merge, Reflex Trainer, Word Scramble) behind Firebase email/password sign-in |
+| [**sudoku**](https://github.com/Karthick-dev-cart/sudoku) | Classic Sudoku with a real backtracking generator that guarantees a unique solution — not naive fill-then-remove, which can silently ship ambiguous puzzles |
+| [**wordle**](https://github.com/Karthick-dev-cart/wordle) | A Wordle clone with duplicate-letter-aware color feedback (unit tested) and a persisted win streak |
+| [**skyhop**](https://github.com/Karthick-dev-cart/skyhop) | A flappy-style endless runner; the physics live in a pure Dart class, unit tested independent of the UI |
+| [**snake**](https://github.com/Karthick-dev-cart/snake) | Classic grid-based Snake with swipe/keyboard controls and a speed curve |
 
 #### Developer tooling
 
