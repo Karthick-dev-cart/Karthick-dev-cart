@@ -4,6 +4,7 @@
 ![Games shipped](https://img.shields.io/badge/games%20shipped-58-6e56cf?style=flat-square)
 ![Agent infra tools](https://img.shields.io/badge/agent%20infra%20tools-5-6e56cf?style=flat-square)
 ![Dev tooling](https://img.shields.io/badge/dev%20tooling-2-6e56cf?style=flat-square)
+![Release platforms](https://img.shields.io/badge/game%20releases-Windows%20%7C%20Android-6e56cf?style=flat-square)
 
 Senior technical architect and AI agentic automation engineer, working in **Python** — data pipelines, backend systems, and agent tooling. Also shipping **TypeScript** design systems and frontend tooling.
 
@@ -40,7 +41,15 @@ Same checklist on every repo below, whether it's a Python agent tool or a Flutte
 2. **Test depth matches the actual complexity**, not a padded-to-look-thorough number. An exhaustive-search AI gets an exhaustive test that plays out every opponent line; a heuristic AI gets concrete tactical positions; a puzzle generator gets a correctness proof (uniqueness, solvability, or connectivity — whichever invariant is load-bearing); a card game gets its actual rulebook exercised edge case by edge case.
 3. **Static analysis has to be clean** — `flutter analyze` / linting with zero issues — before anything moves on.
 4. **It has to actually run**, not just build. For the Flutter games specifically, that means launching the real Windows `.exe` and confirming the process is alive via a live process check, because a successful compile and a working app are not the same claim.
-5. **Downloadable, not just readable.** Each game repo ships a ready-to-run Windows build as a [GitHub Release](https://github.com/Karthick-dev-cart?tab=repositories) — no Flutter SDK required, just download, unzip, and run.
+5. **Downloadable, not just readable, on more than one platform.** Each game repo ships as a ready-to-run [GitHub Release](https://github.com/Karthick-dev-cart?tab=repositories) — a Windows `.exe` bundle *and* an Android `.apk` on the same tag — no Flutter SDK, no build step, just download and run.
+
+#### Field notes
+
+A few specific things that came up doing the above, because "it works" is worth backing with what actually happened rather than asserted on faith:
+
+- **A cross-drive Kotlin bug, caught on one repo before it could waste 57 identical failures.** Building the first Android release, `flutter build apk --release` ran for **19 minutes and 36 seconds** before failing with `IllegalArgumentException: this and base files have different roots`. Root cause: Kotlin's incremental-compilation cache tries to compute a relative path between the project directory (`D:\Games\...`) and the Flutter pub-cache (`C:\Users\...`) — which is undefined on Windows once two paths don't share a drive letter. Fix was one line (`kotlin.incremental=false` in `android/gradle.properties`). The important part isn't the line, it's the sequencing: piloted the fix on a single repo, confirmed the rebuild succeeded in **102 seconds**, verified the resulting APK actually uploaded and matched what a clean install expects — *then* rolled the fix out to all 58 projects. Discovering that bug 58 times, mid-rollout, would have cost hours instead of one extra pilot run.
+- **A silent Firebase gap, caught by checking for the file instead of assuming.** One game (`brain_quest`) uses Firebase email/password auth. Before shipping it as a release on any platform, checking for `firebase_options.dart` and `android/app/google-services.json` turned up neither — the Firebase *packages* were wired in, but the project was never actually connected to a live Firebase project. That's not a platform limitation to route around, it's a broken build waiting to happen, so it's excluded from both the Windows and Android release rollouts until it's properly configured, rather than shipped anyway and left for someone to discover by downloading it.
+- **Windows builds are verified by launching them, not by trusting exit code 0.** Every game's `.exe` is confirmed alive afterward via a live process check, because a Flutter Windows release can compile clean and still fail to start if a plugin's native dependencies aren't bundled correctly — "the build finished" and "the app runs" are different claims, and only the second one is the one that matters.
 
 #### Agent infrastructure
 
@@ -62,7 +71,7 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 
 #### Games
 
-**58** small Flutter games, each its own repo, each shipped as source *and* as a downloadable Windows `.exe` under that repo's Releases tab — see [How I verify before shipping](#how-i-verify-before-shipping) above for the pipeline every one of them goes through.
+**58** small Flutter games, each its own repo, each shipped as source *and* as a downloadable build under that repo's Releases tab — a Windows `.exe` and an Android `.apk` on the same `v1.0.0` tag. See [How I verify before shipping](#how-i-verify-before-shipping) and [Field notes](#field-notes) above for the pipeline every one of them goes through, including the one that shipped Windows-only for a documented reason.
 
 <details>
 <summary><strong>🧠 Where the AI actually thinks</strong> — exhaustive proofs, minimax, and pathfinding</summary>
@@ -91,7 +100,7 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 | [**freecell**](https://github.com/Karthick-dev-cart/freecell) | Full Freecell rules, not a simplified card game — moving one card at a time through free cells *is* how Freecell actually works, unlike the single-card-move scope-cut in the Klondike build |
 | [**dotsandboxes**](https://github.com/Karthick-dev-cart/dotsandboxes) | Handles a single line completing two boxes at once (a shared edge), with an AI that specifically avoids gifting the opponent a free box |
 | [**wordle**](https://github.com/Karthick-dev-cart/wordle) | Duplicate-letter-aware color feedback (unit tested) and a persisted win streak |
-| [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games behind Firebase email/password sign-in |
+| [**brain_quest**](https://github.com/Karthick-dev-cart/brain_quest) | Four brain-training mini-games behind Firebase email/password sign-in — currently source-only, no release build, until its Firebase project connection is finished (see [Field notes](#field-notes)) |
 
 </details>
 
