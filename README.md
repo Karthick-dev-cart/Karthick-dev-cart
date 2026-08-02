@@ -1,13 +1,21 @@
-### Hi, I'm Karthick 👋
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=190&section=header&text=Karthick&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Senior%20Technical%20Architect%20%C2%B7%20AI%20Agentic%20Automation%20Engineer&descAlignY=58&descSize=18&descColor=eae6fb" alt="Karthick — Senior Technical Architect, AI Agentic Automation Engineer" width="100%" />
+</p>
 
-![Profile views](https://komarev.com/ghpvc/?username=Karthick-dev-cart&color=6e56cf&style=flat-square&label=profile+views)
-![Games shipped](https://img.shields.io/badge/games%20shipped-58-6e56cf?style=flat-square)
-![Agent infra tools](https://img.shields.io/badge/agent%20infra%20tools-5-6e56cf?style=flat-square)
-![Token economics tools](https://img.shields.io/badge/token%20economics%20tools-8-6e56cf?style=flat-square)
-![RAG pipeline tools](https://img.shields.io/badge/RAG%20pipeline%20tools-7-6e56cf?style=flat-square)
-![Claude workflow tools](https://img.shields.io/badge/claude%20workflow%20tools-6-6e56cf?style=flat-square)
-![Dev tooling](https://img.shields.io/badge/dev%20tooling-2-6e56cf?style=flat-square)
-![Release platforms](https://img.shields.io/badge/game%20releases-Windows%20%7C%20Android-6e56cf?style=flat-square)
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=17&pause=1200&color=6E56CF&center=true&vCenter=true&width=760&lines=35%2B+repos+%E2%80%94+every+one+ships+with+a+real+test+suite+and+CI;Honest+verification+against+live+APIs%2C+never+mocks+alone;Budget+enforcement+and+per-call+failure+isolation%2C+by+default;Also+shipping+58+Flutter+games%2C+each+one+downloadable+and+verified" alt="Typing SVG" />
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Karthick-dev-cart&color=6e56cf&style=flat-square&label=profile+views" alt="Profile views" />
+  <img src="https://img.shields.io/badge/games%20shipped-58-6e56cf?style=flat-square" alt="Games shipped" />
+  <img src="https://img.shields.io/badge/agent%20infra%20tools-5-6e56cf?style=flat-square" alt="Agent infra tools" />
+  <img src="https://img.shields.io/badge/token%20economics%20tools-8-6e56cf?style=flat-square" alt="Token economics tools" />
+  <img src="https://img.shields.io/badge/RAG%20pipeline%20tools-7-6e56cf?style=flat-square" alt="RAG pipeline tools" />
+  <img src="https://img.shields.io/badge/claude%20workflow%20tools-6-6e56cf?style=flat-square" alt="Claude workflow tools" />
+  <img src="https://img.shields.io/badge/dev%20tooling-2-6e56cf?style=flat-square" alt="Dev tooling" />
+  <img src="https://img.shields.io/badge/game%20releases-Windows%20%7C%20Android-6e56cf?style=flat-square" alt="Release platforms" />
+</p>
 
 Senior technical architect and AI agentic automation engineer, working in **Python** — data pipelines, backend systems, and agent tooling. Also shipping **TypeScript** design systems and frontend tooling.
 
@@ -20,20 +28,31 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 
 #### Stack
 
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Pydantic](https://img.shields.io/badge/-Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white)
-![Pytest](https://img.shields.io/badge/-Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white)
-![Claude API](https://img.shields.io/badge/-Claude%20API-D97757?style=flat-square)
-![GitHub Actions](https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![Dart](https://img.shields.io/badge/-Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/-Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white" alt="Pydantic" />
+  <img src="https://img.shields.io/badge/-Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="Pytest" />
+  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/-Claude%20API-D97757?style=flat-square" alt="Claude API" />
+  <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+  <img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/-Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart" />
+</p>
 
-<p align="left">
+<p align="center">
   <img height="165em" src="https://github-readme-stats.vercel.app/api?username=Karthick-dev-cart&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide_title=true" alt="GitHub stats" />
+  <img height="165em" src="https://streak-stats.demolab.com?user=Karthick-dev-cart&theme=tokyonight&hide_border=true&background=00000000" alt="GitHub streak stats" />
   <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Karthick-dev-cart&layout=compact&theme=tokyonight&hide_border=true&hide_title=true" alt="Top languages" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Karthick-dev-cart/Karthick-dev-cart/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Karthick-dev-cart/Karthick-dev-cart/output/github-contribution-grid-snake.svg" />
+    <img alt="A snake animation eating through my GitHub contribution graph" src="https://raw.githubusercontent.com/Karthick-dev-cart/Karthick-dev-cart/output/github-contribution-grid-snake.svg" width="100%" />
+  </picture>
 </p>
 
 #### How I verify before shipping
@@ -173,3 +192,7 @@ Full list, always current, on the [repositories page](https://github.com/Karthic
 #### In progress
 
 - [google/langextract](https://github.com/google/langextract) — verified two genuine, unclaimed bugs against current `main`: [#492](https://github.com/google/langextract/issues/492) (OpenAI o-series/gpt-3.5 model IDs route to no provider) and [#491](https://github.com/google/langextract/issues/491) (a refused/content-filtered OpenAI completion is silently reported as a successful empty result instead of raising, unlike the equivalent batch-path guard). Fixes and regression tests are ready; PRs are pending because the repo's contribution guidelines require the linked issue to have community reactions first — commented on both to help clear that bar honestly rather than opening PRs against a 0-reaction issue.
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=100&section=footer" alt="" width="100%" />
+</p>
