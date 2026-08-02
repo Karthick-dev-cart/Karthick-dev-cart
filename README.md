@@ -42,10 +42,6 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 </p>
 
 <p align="center">
-  <img height="165em" src="https://streak-stats.demolab.com?user=Karthick-dev-cart&theme=tokyonight&hide_border=true&background=00000000&disable_animations=true" alt="GitHub streak stats" />
-</p>
-
-<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Karthick-dev-cart/Karthick-dev-cart/output/github-contribution-grid-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Karthick-dev-cart/Karthick-dev-cart/output/github-contribution-grid-snake.svg" />
