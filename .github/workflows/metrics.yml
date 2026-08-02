@@ -23,4 +23,4 @@ jobs:
           user: ${{ github.repository_owner }}
           template: classic
           base: "header, activity, community, repositories"
-          commit_message: "chore: update profile metrics [skip ci]"
+          committer_message: "chore: update profile metrics [skip ci]"
