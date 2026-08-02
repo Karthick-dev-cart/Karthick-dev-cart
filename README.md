@@ -26,6 +26,10 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 - 💬 Ask me about Python architecture, ETL pipelines, agentic/MCP tooling, or design systems
 - 📫 Reach me by opening an issue on any of my repos
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Karthick-dev-cart/Karthick-dev-cart/main/metrics.svg" alt="GitHub metrics: activity, community, and repositories" width="100%" />
+</p>
+
 #### Stack
 
 <p align="center">
