@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=190&section=header&text=Karthick&fontSize=58&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Senior%20Technical%20Architect%20%C2%B7%20AI%20Agentic%20Automation%20Engineer&descAlignY=58&descSize=18&descColor=eae6fb" alt="Karthick — Senior Technical Architect, AI Agentic Automation Engineer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=150&section=header" alt="" width="100%" />
 </p>
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=17&pause=1200&color=6E56CF&center=true&vCenter=true&width=760&lines=35%2B+repos+%E2%80%94+every+one+ships+with+a+real+test+suite+and+CI;Honest+verification+against+live+APIs%2C+never+mocks+alone;Budget+enforcement+and+per-call+failure+isolation%2C+by+default;Also+shipping+58+Flutter+games%2C+each+one+downloadable+and+verified" alt="Typing SVG" />
-</p>
+### Hi, I'm Karthick 👋
+
+**35+ repos, every one shipped with a real test suite and CI · verified against live APIs, not mocks alone · also shipping 58 downloadable, verified Flutter games**
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Karthick-dev-cart&color=6e56cf&style=flat-square&label=profile+views" alt="Profile views" />
@@ -42,9 +42,7 @@ Senior technical architect and AI agentic automation engineer, working in **Pyth
 </p>
 
 <p align="center">
-  <img height="165em" src="https://github-readme-stats.vercel.app/api?username=Karthick-dev-cart&show_icons=true&count_private=true&theme=tokyonight&hide_border=true&hide_title=true" alt="GitHub stats" />
   <img height="165em" src="https://streak-stats.demolab.com?user=Karthick-dev-cart&theme=tokyonight&hide_border=true&background=00000000" alt="GitHub streak stats" />
-  <img height="165em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Karthick-dev-cart&layout=compact&theme=tokyonight&hide_border=true&hide_title=true" alt="Top languages" />
 </p>
 
 <p align="center">
