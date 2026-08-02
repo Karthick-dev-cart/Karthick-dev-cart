@@ -3,6 +3,9 @@
 ![Profile views](https://komarev.com/ghpvc/?username=Karthick-dev-cart&color=6e56cf&style=flat-square&label=profile+views)
 ![Games shipped](https://img.shields.io/badge/games%20shipped-58-6e56cf?style=flat-square)
 ![Agent infra tools](https://img.shields.io/badge/agent%20infra%20tools-5-6e56cf?style=flat-square)
+![Token economics tools](https://img.shields.io/badge/token%20economics%20tools-8-6e56cf?style=flat-square)
+![RAG pipeline tools](https://img.shields.io/badge/RAG%20pipeline%20tools-7-6e56cf?style=flat-square)
+![Claude workflow tools](https://img.shields.io/badge/claude%20workflow%20tools-6-6e56cf?style=flat-square)
 ![Dev tooling](https://img.shields.io/badge/dev%20tooling-2-6e56cf?style=flat-square)
 ![Release platforms](https://img.shields.io/badge/game%20releases-Windows%20%7C%20Android-6e56cf?style=flat-square)
 
@@ -62,6 +65,48 @@ The throughline across these five: a hard budget or circuit breaker checked *bef
 | [**pathfinder**](https://github.com/Karthick-dev-cart/pathfinder) | A long-horizon task planner that detects when a plan has drifted from its goal and replans only the remaining work — the re-planning loop quorum's own README leaves as a known gap |
 | [**waypoint**](https://github.com/Karthick-dev-cart/waypoint) | A durable, checkpointed workflow engine for chaining Claude-powered steps, with human-in-the-loop approval gates and an audit trail |
 | [**rubric**](https://github.com/Karthick-dev-cart/rubric) | An LLM-as-judge eval harness that grades Claude outputs against rubric criteria using structured outputs, not regex on free text |
+
+#### LLM token economics
+
+Cost-side tooling for running LLMs at scale — attribution, anomaly detection, cross-provider pricing, and the batch/fine-tuning tradeoffs teams actually have to decide on. Every tool below states in its own README exactly how it differs from its closest sibling here, since several answer adjacent-sounding cost questions.
+
+| Project | What it does |
+|---|---|
+| [**tokenledger**](https://github.com/Karthick-dev-cart/tokenledger) | An offline, double-entry-style cost-attribution ledger: turns a JSONL log of LLM calls into a report of which project/feature/user actually drove spend |
+| [**spend-sentinel**](https://github.com/Karthick-dev-cart/spend-sentinel) | A statistical billing-anomaly detector — robust median/MAD baselines per project/feature/user, not a fixed threshold that breaks the first time usage grows |
+| [**model-arbitrage**](https://github.com/Karthick-dev-cart/model-arbitrage) | A cross-provider pricing comparator that recomputes the full cost ranking from your actual workload shape — cache-hit rate alone can flip which model is cheapest |
+| [**batch-economics**](https://github.com/Karthick-dev-cart/batch-economics) | Decides whether a workload should run real-time or on a discounted batch API, gated on whether your latency SLA can tolerate the turnaround |
+| [**finetune-vs-prompt**](https://github.com/Karthick-dev-cart/finetune-vs-prompt) | Computes the request-volume breakeven where fine-tuning's training cost pays for itself against long-context prompting — and says plainly when it never does |
+| [**pareto-router**](https://github.com/Karthick-dev-cart/pareto-router) | Finds the Pareto-optimal cost/quality frontier in a historical log of real request outcomes — audits what already happened, not a live router |
+| [**cache-yield**](https://github.com/Karthick-dev-cart/cache-yield) | Estimates how much prompt caching would have saved on a historical request log, from real shared-prefix structure and real cache pricing multipliers |
+| [**tokendiff**](https://github.com/Karthick-dev-cart/tokendiff) | A CI gate that fails the build when a prompt template's token count regresses past a configurable threshold |
+
+#### RAG pipeline tooling
+
+Five tools spanning one RAG pipeline end to end — rewrite the query, chunk the corpus, retrieve, pack the context window, then check the generated answer stayed grounded — plus two supporting tools for cost planning and index staleness. Each README documents exactly where it sits in that pipeline and what its neighbors don't do.
+
+| Project | What it does |
+|---|---|
+| [**query-rewriter-bench**](https://github.com/Karthick-dev-cart/query-rewriter-bench) | Benchmarks query-rewriting strategies upstream of retrieval — does expanding/decomposing the query actually improve what gets retrieved? |
+| [**chunk-bench**](https://github.com/Karthick-dev-cart/chunk-bench) | Benchmarks chunking strategies by their effect on retrieval quality, holding the embedder fixed |
+| [**retrieval-arena**](https://github.com/Karthick-dev-cart/retrieval-arena) | Benchmarks sparse (BM25), dense, and hybrid (RRF) retrieval methods against the same corpus and eval set |
+| [**context-packer**](https://github.com/Karthick-dev-cart/context-packer) | Solves the downstream knapsack problem: which already-scored chunks actually fit a context-token budget |
+| [**groundcheck**](https://github.com/Karthick-dev-cart/groundcheck) | Checks whether a generated answer stayed faithful to its retrieved context, sentence by sentence |
+| [**rag-costmap**](https://github.com/Karthick-dev-cart/rag-costmap) | Projects a RAG system's indexing and recurring query/storage costs from 10K to 10M documents, before you build it |
+| [**index-decay**](https://github.com/Karthick-dev-cart/index-decay) | Watches a RAG vector index's source documents for drift and tells you exactly what needs re-embedding |
+
+#### Claude agent/workflow tooling
+
+Observability and correctness tooling for multi-step Claude agent workflows — three transcript-analysis tools (call graph, replay/diff, flame-graph profile) each scoped to a different question, plus schema-drift detection, behavioral regression testing, and adversarial red-teaming.
+
+| Project | What it does |
+|---|---|
+| [**agent-graph**](https://github.com/Karthick-dev-cart/agent-graph) | Reconstructs a multi-agent session's call tree from its transcript — structure, cost, and where the tokens went |
+| [**session-replay**](https://github.com/Karthick-dev-cart/session-replay) | Deterministically steps through a session transcript and diffs two runs of "the same" task to find exactly where they diverged |
+| [**workflow-profiler**](https://github.com/Karthick-dev-cart/workflow-profiler) | A per-step flame-graph profiler for where time and cost actually went in an agentic workflow |
+| [**tool-contract**](https://github.com/Karthick-dev-cart/tool-contract) | Statically detects drift between a declared MCP/tool-use JSON Schema and the model's actual observed calls |
+| [**prompt-regress**](https://github.com/Karthick-dev-cart/prompt-regress) | Records a baseline against the live model, then flags semantic drift and format breaks after a prompt/model change |
+| [**guardrail-bench**](https://github.com/Karthick-dev-cart/guardrail-bench) | Adversarial red-teaming harness that scores a system prompt's robustness against jailbreak/injection/extraction probes |
 
 #### Design systems & frontend tooling
 
