@@ -2,66 +2,101 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=150&section=header" alt="" width="100%" />
 </p>
 
-### Hi, I’m Karthick 👋
+# Karthick — Senior Technical Architect & AI Infrastructure Engineer 👋
 
-**Senior technical architect & AI automation engineer — building reliable, test-first systems, thoughtful design systems, and developer tooling.**
+Senior engineer focused on building production-grade systems that are robust, observable, and cost-effective. I design and ship test-first backends, large‑scale LLM/agent tooling, resilient RAG pipelines, and accessible TypeScript frontends — all backed by reproducible CI/CD and verified releases.
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Karthick-dev-cart&color=6e56cf&style=flat-square&label=profile+views" alt="Profile views" />
-  <img src="https://img.shields.io/badge/games%20shipped-58-6e56cf?style=flat-square" alt="Games shipped" />
-  <img src="https://img.shields.io/badge/open-source-contribs-✓-6e56cf?style=flat-square" alt="Open source contributions" />
-</p>
-
-I build production-grade systems across the stack: backend data pipelines and agent tooling in Python, robust TypeScript frontends and design systems, and verified, downloadable game releases. Every project emphasizes testing, observability, and reproducible releases.
-
-- 🔭 Focus: AI agent infrastructure, cost-aware LLM tooling, reliable RAG pipelines
-- ⚙️ Engineering approach: test-first, clear separation of logic & interfaces, reproducible releases
-- 🌱 Open-source: active contributor and maintainer of several projects
-- 📫 Reach out by opening an issue or discussion on any repo
+- 35+ public repositories — every project includes tests, CI, and release artifacts
+- 58 downloadable Flutter games with verified builds across platforms
+- Specialty: LLM cost control, multi-agent orchestration, durable workflows, and developer tooling
 
 ---
 
-## 🔧 Tech & Tools
+## Core strengths & impact areas
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/-PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="Postgres" />
-  <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis" />
-  <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-</p>
+- System design for reliability: architect multi-component systems with clear boundaries, failure isolation, and audit trails.
+- Cost-aware LLM operations: measure, attribute, and cap token spend; build tooling that prevents runaway bills.
+- Deterministic testing & verification: test suites reflect real-world behaviour (live API verification where required).
+- Observability & gating: actionable metrics, CIR / audit gates, and reproducible release processes.
+- Developer experience: design systems, automation, and tooling that make teams faster and safer.
 
 ---
 
-## 🚀 Selected projects
+## Selected projects (high-impact, production-oriented)
 
-| Project | What it does |
+| Project | Role & Impact |
 |---|---|
-| [horizon](https://github.com/Karthick-dev-cart/horizon) | Context-window budget manager for long-running agents — summarizes or drops old turns to stay within token budgets |
-| [quorum](https://github.com/Karthick-dev-cart/quorum) | Multi-agent orchestration control plane with budget enforcement and per-agent failure isolation |
-| [pathfinder](https://github.com/Karthick-dev-cart/pathfinder) | Long-horizon task planner that replans only remaining work when goals drift |
-| [waypoint](https://github.com/Karthick-dev-cart/waypoint) | Durable, checkpointed workflow engine with human-in-the-loop gates and audit trails |
-| [tokenledger](https://github.com/Karthick-dev-cart/tokenledger) | Double-entry-style cost attribution for LLM calls — turns JSONL logs into cost reports |
-| [oss-scout](https://github.com/Karthick-dev-cart/oss-scout) | MCP server that finds genuinely contributable open-source issues by filtering noisy duplicates |
+| [horizon](https://github.com/Karthick-dev-cart/horizon) | Context-window budget manager for long-running agents — enforces token budgets by summarizing/dropping turns to keep sessions within limits. |
+| [quorum](https://github.com/Karthick-dev-cart/quorum) | Multi-agent orchestration control plane with circuit breakers and per-agent failure isolation — designed for robust parallel workflows. |
+| [pathfinder](https://github.com/Karthick-dev-cart/pathfinder) | Long-horizon task planner that detects drift and replans only remaining work to reduce wasted compute and operator overhead. |
+| [waypoint](https://github.com/Karthick-dev-cart/waypoint) | Durable, checkpointed workflow engine with human-in-the-loop approval gates and full audit trails for compliance-sensitive flows. |
+| [tokenledger](https://github.com/Karthick-dev-cart/tokenledger) | Double-entry style cost attribution for LLM calls — converts JSONL call logs into auditable cost reports for teams. |
+| [oss-scout](https://github.com/Karthick-dev-cart/oss-scout) | Issue discovery & triage tooling that surfaces genuinely contributable issues, reducing noisy duplicates and improving onboarding. |
 
-(Full list: https://github.com/Karthick-dev-cart?tab=repositories)
+(Full repo list: https://github.com/Karthick-dev-cart?tab=repositories)
 
 ---
 
-## 📊 GitHub stats
+## Engineering approach
 
-[![Karthick's GitHub stats](https://github-readme-stats.vercel.app/api?username=Karthick-dev-cart&show_icons=true&theme=radical)](https://github.com/Karthick-dev-cart)
+- Test-first: unit, integration, and system tests that codify expected behaviour and prevent regressions.
+- Separation of concerns: business logic isolated from I/O and frameworks for easier reasoning and testing.
+- Reproducible releases: binary/artifact verification, CI gates, and runbook-driven release steps.
+- Defensive design: budget/circuit-breakers, per-call failure isolation, and robust fallbacks.
+- Data-driven decisions: instrumentation and retroactive audits guide design and cost trade-offs.
 
+---
+
+## Technical toolkit
+
+<p align="center">
+  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" /> 
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /> 
+  <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Postgres-316192?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Jest-99424f?style=flat-square&logo=jest&logoColor=white" />
+</p>
+
+---
+
+## Verification & reproducibility
+
+Every project is governed by the same release checklist:
+1. Clean static analysis & linting (CI prevents merges with failing checks).
+2. Tests that reflect real behaviour (system/integration tests against live or emulated backends when necessary).
+3. Reproducible build artifacts (downloads or release packages for consumers).
+4. Post-release verification (smoke or runtime checks to confirm the artifact actually runs).
+
+---
+
+## Notable patterns & libraries I build for teams
+
+- Token spend auditing and anomaly detection (batch vs real-time routing, model arbitration).
+- RAG pipeline tooling: query rewriting, chunking strategy benchmarks, retrieval comparators, and ground-checking.
+- Agent observability: call-graph reconstruction, deterministic session replay, and per-step profiling.
+
+---
+
+## Speaking, mentoring & collaboration
+
+I mentor engineers on system design, run architecture reviews focused on reliability and cost, and run workshops that translate ML/agent prototypes into production-ready systems. If you want help maturing an LLM workflow or making a release process robust, I’ll happily collaborate.
+
+---
+
+## GitHub metrics & quick links
+
+[![Karthick's GitHub stats](https://github-readme-stats.vercel.app/api?username=Karthick-dev-cart&show_icons=true&theme=radical)](https://github.com/Karthick-dev-cart)  
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Karthick-dev-cart&layout=compact&theme=radical)](https://github.com/Karthick-dev-cart)
 
 ---
 
-## 📫 Contact
+## Get in touch
 
-- GitHub: https://github.com/Karthick-dev-cart
-- Repositories: https://github.com/Karthick-dev-cart?tab=repositories
+- Open an issue or discussion on any repository — label it "collab" or "help wanted".  
+- If you prefer private contact, tell me which contact method to include (email / LinkedIn / website) and I’ll add it.
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=100&section=footer" alt="" width="100%" />
