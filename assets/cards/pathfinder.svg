@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" viewBox="0 0 420 120">
+  <defs>
+    <linearGradient id="grad3" x1="0" x2="1">
+      <stop offset="0%" stop-color="#6E56CF"><animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite"/></stop>
+      <stop offset="100%" stop-color="#6EE3C3" />
+    </linearGradient>
+  </defs>
+  <rect rx="12" ry="12" width="420" height="120" fill="#0f0f12" stroke="url(#grad3)" stroke-width="3" />
+  <text x="24" y="40" fill="#fff" font-family="Segoe UI, Roboto, sans-serif" font-size="18" font-weight="700">pathfinder</text>
+  <text x="24" y="70" fill="#cfcff8" font-family="Segoe UI, Roboto, sans-serif" font-size="13">Long-horizon task planner that reduces wasted compute</text>
+</svg>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=6E56CF&height=150&section=header" alt="" width="100%" />
+  <img src="./assets/hero.svg" alt="hero" width="100%" />
 </p>
 
 <p align="center">
@@ -44,11 +44,11 @@ I design and ship production-grade systems that are reliable, observable, and co
 
 ## Featured projects
 
-| Project | Quick impact |
-|---|---|
-| [horizon](https://github.com/Karthick-dev-cart/horizon) | Token-budgeting & summarization for long-running agents |
-| [quorum](https://github.com/Karthick-dev-cart/quorum) | Multi-agent orchestration with circuit breakers |
-| [pathfinder](https://github.com/Karthick-dev-cart/pathfinder) | Long-horizon task planner that reduces wasted compute |
+<p align="center">
+  <a href="https://github.com/Karthick-dev-cart/horizon"><img src="./assets/cards/horizon.svg" alt="horizon" style="margin:8px"/></a>
+  <a href="https://github.com/Karthick-dev-cart/quorum"><img src="./assets/cards/quorum.svg" alt="quorum" style="margin:8px"/></a>
+  <a href="https://github.com/Karthick-dev-cart/pathfinder"><img src="./assets/cards/pathfinder.svg" alt="pathfinder" style="margin:8px"/></a>
+</p>
 
 ---
 
@@ -57,7 +57,7 @@ I design and ship production-grade systems that are reliable, observable, and co
 - Typing headline: dynamic text using readme-typing-svg
 - Contribution snake: animated SVG from /output (already in repo)
 - Hero capsule header: capsule-render SVG banner
-- GitHub stats (dynamic cards below)
+- Animated SVG project cards committed to /assets/cards
 
 
 <p align="center">
@@ -65,17 +65,6 @@ I design and ship production-grade systems that are reliable, observable, and co
   <img src="https://github-readme-stats.vercel.app/api?username=Karthick-dev-cart&show_icons=true&theme=radical" alt="Karthick's GitHub stats" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Karthick-dev-cart&layout=compact&theme=radical" alt="Top languages" />
 </p>
-
----
-
-## Design polish & next steps (what I can add)
-
-- Add a small animated GIF hero (e.g., short architecture loop) — you can provide a GIF or I can create/host one.
-- Add Lottie animations exported to GIF or SVG for key sections.
-- Add styled project cards (SVGs) with animated gradients — I can generate and commit them to /assets.
-- Add pinned repo showcase images/screenshots for 3–4 flagship projects.
-
-If you want any of the above, say which items and provide images (or say “Create GIFs” and I’ll generate simple animated SVGs/GIFs and commit them).
 
 ---
 
